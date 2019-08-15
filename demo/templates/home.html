@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css')}}">
+    <meta charset="UTF-8">
+    <title>Recipe Survey</title>
+
+</head>
+
+<body>
+<div class="container" style="margin-top: 50px">
+<div class="jumbotron">
+<div align="center">
+    <h2>Welcome to the "Online Recipe Origin" Survey</h2><br >
+    </div>
+    <p class="lead">
+        You are invited to take part in this online recipe survey!
+        In this survey, you will see 9 recipe images from popular recipe portals in China, Germany and the United States.
+        Your task is to look at the images and help us identify which recipe portal the images come from. There are three
+        statements under each image about its source, you will tell us to what extent do you agree with the statements on
+        a scale from 1-5. Below you can see an example of the survey.
+    </p><br >
+    <div align="center">
+        <figure class="figure">
+        <img src="{{ img_url }}" class="figure-img img-fluid rounded" width="1000" alt="Example Survey.">
+        </figure>
+        <figcaption class="figure-caption"> Example survey</figcaption>
+    </div>
+    <br >
+    <p class="lead">
+        It will takes you approximately 5-10 minutes to complete the whole survey at your computer. At the end of the survey,
+        you will be asked some demographic questions. But don't worry, you won't be asked to provide information such as your
+        name or address. The data you provide will be saved in secure computer files, and will only be used for academic
+        research. There are no konwn risks or discomforts associated with this survey.Taking part in this survey is completely
+        voluntary, you can withdraw at any time if you are in this study. If you have questions or want a copy or summary of this
+        study's results, you can contact the researcher at the email address below.
+
+        If you are ready, please click the "Start Survey" below.<br ><br >
+
+        Contact: MA. Qing Zhang, University of Regensburg<br >
+        Email: <a href="mailto:Qing.Zhang@ur.de">Qing.Zhang@ur.de</a>
+    </p>
+
+
+
+<div align="center">
+    <form method="POST" action="/home">
+        {{ form.user_id(value=user_id)}}<br >
+    <button type="submit" class="'btn btn-lg btn-success">Start Survey</button>
+    </form>
+</div>
+
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,96 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+<form action='' method="post">
+<div class='container' style="margin-top: 50px">
+<div align="center">
+	<h2>{{name}}</h2><br />
+<div class='jumbotron'>
+<div align="center">
+     <img src="{{ img_url }}" width = '300'>
+    <br >
+    <h5>{{ tip }}</h5>
+    <input type="hidden" name='img_url' value="{{ img_url }}">
+</div>
+</div>
+</div>
+<div align="center">
+    <h4>Based on the image, to what extent do you agree with the statements about the origin of the recipe:</h4><br >
+    <h5>The recipe comes from the <b>Chinese</b> recipe portal: www.xiachufang.com</h5>
+    <ul class="likert">
+        <li>
+            <input type="radio" name="conf_x" value="1" required>
+            <label>1 <br>(Totally Disagree)</label>
+        </li>
+        <li>
+            <input type="radio" name="conf_x" value="2" required>
+            <label>2</label>
+        </li>
+        <li>
+            <input type="radio" name="conf_x" value="3" required>
+            <label>3</label>
+        </li>
+        <li>
+            <input type="radio" name="conf_x" value="4" required>
+            <label>4</label>
+        </li>
+        <li>
+            <input type="radio" name="conf_x" value="5" required>
+            <label>5 <br>(Totally Agree)</label>
+        </li>
+    </ul>
+    <h5>The recipe comes from the <b>US</b> recipe portal: www.allrecipes.com</h5>
+    <ul class="likert">
+        <li>
+            <input type="radio" name="conf_a" value="1" required>
+            <label>1 <br>(Totally Disagree)</label>
+        </li>
+        <li>
+            <input type="radio" name="conf_a" value="2" required>
+            <label>2</label>
+        </li>
+        <li>
+            <input type="radio" name="conf_a" value="3" required>
+            <label>3</label>
+        </li>
+        <li>
+            <input type="radio" name="conf_a" value="4" required>
+            <label>4</label>
+        </li>
+        <li>
+            <input type="radio" name="conf_a" value="5" required>
+            <label>5 <br>(Totally Agree)</label>
+        </li>
+    </ul>
+    <h5>The recipe comes from the <b>German</b> recipe portal: www.kochbar.de</h5>
+    <ul class="likert">
+        <li>
+            <input type="radio" name="conf_k" value="1" required>
+            <label>1 <br>(Totally Disagree)</label>
+        </li>
+        <li>
+            <input type="radio" name="conf_k" value="2" required>
+            <label>2</label>
+        </li>
+        <li>
+            <input type="radio" name="conf_k" value="3" required>
+            <label>3</label>
+        </li>
+        <li>
+            <input type="radio" name="conf_k" value="4" required>
+            <label>4</label>
+        </li>
+        <li>
+            <input type="radio" name="conf_k" value="5" required>
+            <label>5 <br>(Totally Agree)</label>
+        </li>
+    </ul>
+    <br >
+	<button type="submit" class='btn btn-lg btn-success'>Next >></button>
+</div>
+</div>
+
+<hr />
+
+</form>
+{% endblock content %}
